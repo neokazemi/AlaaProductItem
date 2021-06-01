@@ -29,16 +29,18 @@
       </div>
     </div>
   </div>
+    <productItem></productItem>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import productItem from './components/productItem.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    productItem
   }
 }
 </script>
