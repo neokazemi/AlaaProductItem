@@ -1,38 +1,18 @@
-.price-number{
-    display: flex;
-}
-
-
-
-
-
-@media only screen and (max-width:768px){
-    .price-number{
-        flex-direction:column; 
-    }
-   .add-cart-icon { 
+.add-cart-info{
     display: flex;
     justify-content: center;
     align-items: center;
-    order:2;
-
-   } 
+}
 .price-info{
     display: flex;
     justify-content: center;
     align-items: center;
-    order:0;
 }
-.price-box{
-    justify-content:flex-end;
-}
-.main-price{
-    font-size:11px;
-}
-
-
-}
-
-@media only screen and (max-width:300px){
-    
+@media only screen and (max-width:768px){
+    .add-cart-info{
+        order: 2;
+    }
+    .price-info{
+        order: 1;
+    }
 }

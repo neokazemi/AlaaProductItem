@@ -116,7 +116,6 @@ export default {
 <style scoped>
 .main-content{
   margin-top: 100px;
-
 }
 
 #app{

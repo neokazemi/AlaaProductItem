@@ -28,15 +28,12 @@
 
         </div>
       </div>
-      <div>
-        <div class="price-box">
-          <div class="box-item"> <img src="../assets/icons/add_cart.png" class="add-cart-icon" alt="img1"></div>
-
-          <div class="box-item">
-            <div class="main-price">%{{product.price.base}}</div>
-            <div class="final-rice">{{product.price.final }}</div>
-            <div>تومان</div>
-          </div>
+      <div class="price-box">
+        <div class="add-cart-info"> <img src="../assets/icons/add_cart.png" class="add-cart-icon" alt="img1"></div>
+        <div class="price-info">
+          <div class="main-price">%{{product.price.base}}</div>
+          <div class="final-rice">{{product.price.final }}</div>
+          <div>تومان</div>
         </div>
       </div>
 
@@ -172,28 +169,26 @@ data(){
     width: 90px;
     height: 90px;
   }
-
   /*----------------title--------------*/
   .main-title{
     padding:  0;
   }
   /*-------------------price box----------------------*/
-  add-cart-icon{
+  .add-cart-icon{
     order: 5;
   }
-  main-price{
-
+ .main-price{
+    order: 1;
   }
-  final-rice{
-
+  .final-rice{
+    order: 1;
   }
   .discount{
    border-radius: 10px 10px 0 0;
     position: absolute;
     top:auto;
     bottom: 0px ;
-  right: 40%;
-
+    left : calc( 100% - 120px);
   }
 
 }
