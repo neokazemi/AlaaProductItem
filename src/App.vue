@@ -1,28 +1,75 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" >
+  <div class="container">
+    <div class="row  main-content">
+      <div class="col-md-3 col-sm-6 col-12">
+        <div class="product-item-box ">
+
+          <productItem></productItem>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-12">
+        <div class="product-item-box ">
+
+          <productItem></productItem>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-12">
+        <div class="product-item-box ">
+
+          <productItem></productItem>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-12">
+        <div class="product-item-box ">
+
+          <productItem></productItem>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import productItem from './components/productItem.vue'
 
 export default {
+  data(){
+    return {
+      list_item:[1,2,3,4]
+    }
+  },
   name: 'App',
   components: {
-    HelloWorld
+    productItem
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+.main-content{
+  margin-top: 100px;
+
 }
+
+#app{
+  width: 100%;
+  height: 100%;
+}
+
+
+.product-item-box {
+  padding: 15px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+
+}
+
 </style>
