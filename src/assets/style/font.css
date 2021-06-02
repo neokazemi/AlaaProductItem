@@ -94,3 +94,9 @@ body{
     text-align: right;
     background-color: #f0ba51 ;
 }
+
+
+a:link {
+    text-decoration: none;
+    color: black;
+}

@@ -3,10 +3,10 @@
   <div class="container">
     <div class="row  main-content">
       <div v-for="(productItem, index) in productItems" :key="index" class="col-md-3 col-sm-6 col-12">
-        <div class="product-item-box ">
+
 
           <productItem :product="productItem"></productItem>
-        </div>
+
       </div>
     </div>
   </div>
@@ -80,7 +80,7 @@ export default {
           duration: '۲۰ ساعت',
           price: {
             base: 12000000,
-            final: 11500000,
+           final: 11500000,
           },
         },
         {
@@ -125,13 +125,6 @@ export default {
 }
 
 
-.product-item-box {
-  padding: 15px;
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
-  background-color: #ffffff;
 
-}
 
 </style>
