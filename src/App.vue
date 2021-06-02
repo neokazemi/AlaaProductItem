@@ -1,32 +1,34 @@
-<template xmlns="http://www.w3.org/1999/html">
+<template>
   <div id="app" >
   <div class="container">
     <div class="row  main-content">
       <div class="col-md-3 col-sm-6 col-12">
-        <div class="box">
+        <div class="product-item-box ">
+
           <productItem></productItem>
         </div>
       </div>
       <div class="col-md-3 col-sm-6 col-12">
-        <div class="box">
+        <div class="product-item-box ">
+
           <productItem></productItem>
         </div>
       </div>
       <div class="col-md-3 col-sm-6 col-12">
-        <div class="box">
+        <div class="product-item-box ">
+
           <productItem></productItem>
         </div>
       </div>
       <div class="col-md-3 col-sm-6 col-12">
-        <div class="box">
+        <div class="product-item-box ">
+
           <productItem></productItem>
         </div>
       </div>
-      <div class="col-md-3 col-sm-6 col-12">
-        <div class="box">
-          <productItem></productItem>
-        </div>
-      </div>
+
+
+
     </div>
   </div>
   </div>
@@ -37,6 +39,11 @@
 import productItem from './components/productItem.vue'
 
 export default {
+  data(){
+    return {
+      list_item:[1,2,3,4]
+    }
+  },
   name: 'App',
   components: {
     productItem
@@ -44,23 +51,25 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .main-content{
   margin-top: 100px;
+
 }
+
 #app{
   width: 100%;
   height: 100%;
- background-color: #f0ba51 ;
 }
 
-.box {
+
+.product-item-box {
+  padding: 15px;
   width: 100%;
-  height: 375px;
   border-radius: 20px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
   background-color: #ffffff;
-  border: solid 1px red;
+
 }
 
 </style>
