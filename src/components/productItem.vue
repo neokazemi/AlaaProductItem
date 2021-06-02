@@ -1,53 +1,52 @@
 <template>
   <div class="product-item-box ">
   <div class="product-item-main-box">
-    <a href="#" class="img-box">
-      <img :src="product.image" class="img" alt="img1">
-     </a>
-
+    <div class="img-box">
+      <img src="@/assets/images/img1.jpg" class="img" alt="img1">
+     </div>
     <div class="product-item-content">
 
       <div class="main-title">
-        <a href="#" class="title-text">
-         {{product.title
-          }}
-        </a>
+        <span class="title-text">
+          همایش آرش جمع بندی علوم و فنون
+ادبی کنکور
+        </span>
 
       </div>
       <div class="time-author-box">
-        <div  class="box-item">
+        <div class="box-item">
           <img src="../assets/icons/teacher.png" class="teacher-icon" alt="img1">
           <span class="author">
-          {{ product.author }}
+          محمد صادقی
          </span>
 
         </div>
         <div class="box-item">
           <img src="../assets/icons/time.png" class="time-icon" alt="img1">
-          <span class="time"> {{product.duration}}</span>
+          <span class="time"> {{20 | persianDigit }} ساعت</span>
 
         </div>
       </div>
-      <div class="price-box">
-        <div class="add-cart-info"> <img src="../assets/icons/add_cart.png" class="add-cart-icon" alt="img1"></div>
-        <div class="price-info">
-          <div class="main-price">%{{product.price.base}}</div>
-          <div class="final-rice">{{product.price.final }}</div>
-          <div>تومان</div>
+      <div>
+        <div class="price-box">
+          <div class="box-item"> <img src="../assets/icons/add_cart.png" class="add-cart-icon" alt="img1"></div>
+          <div class="box-item discount"> <span>{{ discount | persianDigit }} </span></div>
+          <div class="box-item">
+            <div class="main-price">{{ price | persianDigit }}</div>
+            <div class="final-rice">{{ finalPrice | persianDigit }}</div>
+            <div class="price-Toman">تومان</div>
+          </div>
         </div>
       </div>
 
     </div>
-    <div class="box-item discount"> <span>%{{Math.round(((product.price.base-product.price.final) /(product.price.base))*100)}} </span></div>
   </div>
   </div>
 </template>
 <script>
 
 export  default {
-  props: ['product'],
 data(){
-
   return{
     price:1500,
     discount:'30%',
@@ -55,7 +54,6 @@ data(){
 
   }
 },
-
   methods:{
     discountPercent(){
       return  this.discount=(this.finalPrice/this.price)
@@ -65,12 +63,7 @@ data(){
 </script>
 <style scoped>
 .product-item-box {
-  padding: 15px;
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
-  background-color: #ffffff;
-
+  margin-bottom: 25px;
 }
 .img{
   width: 100%;
@@ -96,19 +89,23 @@ data(){
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  font-size: 13px;
 }
 .author{
   color: #666666;
+
 }
 .teacher-icon{
   width: 13px;
   height: 13px;
   margin-left: 6px;
+
 }
 .time-icon{
   width: 12px;
   height: 12px;
   margin-left: 6px;
+
 }
 .time{
   color: #666666;
@@ -153,7 +150,19 @@ data(){
 }
 .add-cart-icon{
   width: 19px;
-  order: 1;
+}
+.price-box .price-Toman{
+  font-size: 13px;
+}
+@media only screen and (max-width:1200px){
+
+
+}
+@media only screen and (max-width:990px){
+
+  .price-box .main-price{
+    font-size: 18px;
+  }
 }
 @media only screen and (max-width:768px){
 .product-item-main-box{
@@ -169,27 +178,15 @@ data(){
     width: 90px;
     height: 90px;
   }
+
   /*----------------title--------------*/
   .main-title{
     padding:  0;
   }
   /*-------------------price box----------------------*/
-  .add-cart-icon{
-    order: 5;
-  }
- .main-price{
-    order: 1;
-  }
-  .final-rice{
-    order: 1;
-  }
-  .discount{
-   border-radius: 10px 10px 0 0;
-    position: absolute;
-    top:auto;
-    bottom: 0px ;
-    left : calc( 100% - 120px);
-  }
+  add-cart-icon{}
+  main-price{}
+  final-rice{}
 
 }
 @media only screen and (max-width:300px){
