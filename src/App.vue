@@ -35,7 +35,9 @@
 </template>
 
 <script>
-
+import './assets/style/font.css'
+import './assets/style/style1.css'
+import './assets/style/style2.css'
 import productItem from './components/productItem.vue'
 
 export default {
