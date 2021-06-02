@@ -2,14 +2,14 @@
   <div id="app" >
   <div class="container">
     <div class="row  main-content">
-      <div v-for="productItem in productItems"  class="col-md-3 col-sm-6 col-12">
-        <div class="product-item-box">
+      <div v-for="(productItem, index) in productItems" :key="index" class="col-md-3 col-sm-6 col-12">
+        <div class="product-item-box ">
+
           <productItem :product="productItem"></productItem>
         </div>
       </div>
-
     </div>
-   </div>
+  </div>
   </div>
 </template>
 
