@@ -1,9 +1,9 @@
 <template>
-  <div >
+  <div class="product-item-main-box">
     <div class="img-box">
       <img src="@/assets/images/img1.jpg" class="img" alt="img1">
      </div>
-    <div >
+    <div class="product-item-content">
 
       <div class="main-title">
         <span class="title-text">
@@ -98,7 +98,7 @@ data(){
   height: 12px;
   margin-left: 6px;
 }
-.box-item time{
+.time{
   color: #666666;
 }
 .box-item{
@@ -143,8 +143,24 @@ data(){
   width: 19px;
 }
 @media only screen and (max-width:375px){
-
-  .img{
+.product-item-main-box{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+  .product-item-content{
+    margin-right: 15px;
+  }
+  .img-box{
+    width: 90px;
+  }
+}
+@media only screen and (max-width:300px){
+  .product-item-content{
+    margin-right: 10px;
+  }
+  .img-box{
+    width: 70px;
   }
 }
 </style>
