@@ -2,33 +2,12 @@
   <div id="app" >
   <div class="container">
     <div class="row  main-content">
-      <div class="col-md-3 col-sm-6 col-12">
+      <div v-for="productItem in productItems" class="col-md-3 col-sm-6 col-12">
         <div class="product-item-box ">
 
-          <productItem></productItem>
+          <productItem :product="productItem"></productItem>
         </div>
       </div>
-      <div class="col-md-3 col-sm-6 col-12">
-        <div class="product-item-box ">
-
-          <productItem></productItem>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6 col-12">
-        <div class="product-item-box ">
-
-          <productItem></productItem>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6 col-12">
-        <div class="product-item-box ">
-
-          <productItem></productItem>
-        </div>
-      </div>
-
-
-
     </div>
   </div>
   </div>
@@ -43,7 +22,88 @@ import productItem from './components/productItem.vue'
 export default {
   data(){
     return {
-      list_item:[1,2,3,4]
+      productItems:[
+        {
+          image: 'https://cdn.alaatv.com/upload/images/product/01_20210510085445.jpg?w=331&h=331',
+          title: 'همایش آرش جمع بندی علوم و فنون ادبی کنکور',
+          author: 'محمد صادق ثابتی',
+          duration: '۲۰ ساعت',
+          price: {
+            base: 12000000,
+            final: 11500000,
+          },
+        },
+        {
+          image: 'https://cdn.alaatv.com/upload/images/product/02_20210510085432.jpg?w=331&h=331',
+          title: 'همایش آرش جمع بندی علوم و فنون ادبی کنکور',
+          author: 'محمد صادق ثابتی',
+          duration: '۲۰ ساعت',
+          price: {
+            base: 12000000,
+            final: 11500000,
+          },
+        },
+        {
+          image: 'https://cdn.alaatv.com/upload/images/product/07_20210510085547.jpg?w=331&h=331',
+          title: 'همایش آرش جمع بندی علوم و فنون ادبی کنکور',
+          author: 'محمد صادق ثابتی',
+          duration: '۲۰ ساعت',
+          price: {
+            base: 12000000,
+            final: 11500000,
+          },
+        },
+        {
+          image: 'https://cdn.alaatv.com/upload/images/product/08_20210510085456.jpg?w=331&h=331',
+          title: 'همایش آرش جمع بندی علوم و فنون ادبی کنکور',
+          author: 'محمد صادق ثابتی',
+          duration: '۲۰ ساعت',
+          price: {
+            base: 12000000,
+            final: 11500000,
+          },
+        },
+        {
+          image: 'https://cdn.alaatv.com/upload/images/product/12_20210510085405.jpg?w=331&h=331',
+          title: 'همایش آرش جمع بندی علوم و فنون ادبی کنکور',
+          author: 'محمد صادق ثابتی',
+          duration: '۲۰ ساعت',
+          price: {
+            base: 12000000,
+            final: 11500000,
+          },
+        },
+        {
+          image: 'https://cdn.alaatv.com/upload/images/product/11_20210510085516.jpg?w=331&h=331',
+          title: 'همایش آرش جمع بندی علوم و فنون ادبی کنکور',
+          author: 'محمد صادق ثابتی',
+          duration: '۲۰ ساعت',
+          price: {
+            base: 12000000,
+            final: 11500000,
+          },
+        },
+        {
+          image: 'https://cdn.alaatv.com/upload/images/product/06_20210510085352.jpg?w=331&h=331',
+          title: 'همایش آرش جمع بندی علوم و فنون ادبی کنکور',
+          author: 'محمد صادق ثابتی',
+          duration: '۲۰ ساعت',
+          price: {
+            base: 12000000,
+            final: 11500000,
+          },
+        },
+        {
+          image: 'https://cdn.alaatv.com/upload/images/product/02_20210510085432.jpg',
+          title: 'همایش آرش جمع بندی علوم و فنون ادبی کنکور',
+          author: 'محمد صادق ثابتی',
+          duration: '۲۰ ساعت',
+          price: {
+            base: 12000000,
+            final: 11500000,
+          },
+        }
+      ]
     }
   },
   name: 'App',
