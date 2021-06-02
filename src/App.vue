@@ -117,6 +117,7 @@ export default {
 .main-content{
   margin-top: 100px;
 
+
 }
 
 #app{
