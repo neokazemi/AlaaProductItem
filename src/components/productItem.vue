@@ -67,6 +67,7 @@ data(){
 }
 /*----------------title--------------*/
 .main-title{
+  padding: 20px 0 15px 0;
 }
 .main-title title-text{
   width: 100%;
@@ -155,6 +156,11 @@ data(){
   .img-box{
     width: 90px;
     height: 90px;
+  }
+
+  /*----------------title--------------*/
+  .main-title{
+    padding:  0;
   }
   /*-------------------price box----------------------*/
   add-cart-icon{}
