@@ -142,26 +142,34 @@ data(){
 .add-cart-icon{
   width: 19px;
 }
-@media only screen and (max-width:375px){
+@media only screen and (max-width:768px){
 .product-item-main-box{
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
   .product-item-content{
-    margin-right: 15px;
+    width: calc( 100% - 90px );
+    padding-right: 15px;
   }
   .img-box{
-    width: 80%;
-    height: 80%;
+    width: 90px;
+    height: 90px;
   }
+  /*-------------------price box----------------------*/
+  add-cart-icon{}
+  main-price{}
+  final-rice{}
+
 }
 @media only screen and (max-width:300px){
   .product-item-content{
-    margin-right: 10px;
+    width: calc( 100% - 70px );
+    padding-right: 10px;
   }
   .img-box{
     width: 70px;
+    height: 70px;
   }
 }
 </style>
