@@ -6,9 +6,7 @@
     border-radius: 20px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
     background-color: #ffffff;
-
 }
-
 .img {
     width: 100%;
     height: 100%;
@@ -165,10 +163,8 @@
     .product-item-box {
         padding-bottom: 0;
     }
-
-    .main-price {
+    .price-box .main-price {
         font-size: 11px;
-        background-color: aqua;
     }
 
     .product-item-main-box {
@@ -195,11 +191,16 @@
     /*-------------------price box----------------------*/
     .discount {
         border-radius: 10px 10px 0 0;
-        position: relative;
-        align-self: flex-end;
-
+        position: absolute;
+       top:auto;
+        bottom: 25px;
     }
-
+    .price-box{
+        justify-content: flex-end;
+    }
+    .add-cart-info{
+        margin-right: 30px;
+    }
 }
 
 @media screen and (max-width: 300px) {

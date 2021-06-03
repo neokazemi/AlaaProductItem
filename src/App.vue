@@ -9,7 +9,6 @@
   </div>
   </div>
 </template>
-
 <script>
 import './assets/style/font.css'
 import './assets/style/style1.css'
