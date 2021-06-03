@@ -19,21 +19,29 @@
     margin-top: 7px;
     margin-bottom: 5px;
 }
-
-.main-title .title-text {
-    width: 100%;
+.title-box{
     font-size: 16px;
     font-weight: 500;
-    font-stretch: normal;
-    line-height: 24px;
-    height: 48px;
-    letter-spacing: normal;
-    color: #333333;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-stretch:normal;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    letter-spacing: normal;
+    color: #333333;
+    overflow: hidden;
+}
+.main-title .title-text {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    height: 48px;
+
+
+
+
+
 }
 
 

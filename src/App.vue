@@ -21,7 +21,7 @@ export default {
       productItems:[
         {
           image: 'https://cdn.alaatv.com/upload/images/product/01_20210510085445.jpg?w=331&h=331',
-          title: 'همایش آرش جمع بندی علوم و فنون ادبی کنکور',
+          title: 'همایش آرش جمع بندی ',
           author: 'محمد صادق ثابتی',
           duration: '۲۰ ساعت',
           price: {
