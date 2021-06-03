@@ -12,7 +12,6 @@
          {{product.title
           }}
         </a>
-
       </div>
       <div class="time-author-box">
         <div  class="box-item">
@@ -28,21 +27,24 @@
 
         </div>
       </div>
-      <div>
         <div class="price-box">
-          <div class="box-item"> <img src="../assets/icons/add_cart.png" class="add-cart-icon" alt="img1"></div>
-
-          <div class="box-item">
+          <div class="box-item discount" id="discount"> <span>%{{Math.round(((product.price.base-product.price.final) /(product.price.base))*100)}} </span></div>
+          <div class="add-cart-info"> <img src="../assets/icons/add_cart.png" class="add-cart-icon" alt="img1"></div>
+          <div class="price-info">
             <div class="main-price">%{{product.price.base}}</div>
-            <div class="final-rice">{{product.price.final }}</div>
-            <div class="price-Toman">تومان</div>
+           <div class="final-price-box">
+             <div class="final-rice">{{product.price.final }}</div>
+             <div class="price-Toman">تومان
+            </div>
+           </div>
           </div>
         </div>
       </div>
 
     </div>
-    <div class="box-item discount"> <span>%{{Math.round(((product.price.base-product.price.final) /(product.price.base))*100)}} </span></div>
+
   </div>
+
 </template>
 <script>
 
@@ -82,6 +84,12 @@ data(){
 /*----------------title--------------*/
 .main-title{
   padding: 20px 0 15px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+
 }
 .main-title title-text{
   width: 100%;
@@ -165,17 +173,17 @@ data(){
 .price-box .price-Toman{
   font-size: 13px;
 }
-@media only screen and (max-width:1200px){
+@media  screen and (max-width:1200px){
 
 
 }
-@media only screen and (max-width:990px){
+@media  screen and (max-width:990px){
 
   .price-box .main-price{
     font-size: 18px;
   }
 }
-@media only screen and (max-width:768px){
+@media screen and (max-width:768px){
 .product-item-main-box{
   display: flex;
   flex-wrap: wrap;
@@ -195,27 +203,17 @@ data(){
     padding:  0;
   }
   /*-------------------price box----------------------*/
-  add-cart-icon{
-    order: 5;
-  }
-  main-price{
 
-
-  }
-  final-rice{
-
-  }
   .discount{
-   border-radius: 10px 10px 0 0;
-    position: absolute;
-    top:auto;
-    bottom: 0px ;
-  right: 40%;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    align-self:flex-end;
 
   }
+
 
 }
-@media only screen and (max-width:300px){
+@media  screen and (max-width:300px){
   .product-item-content{
     width: calc( 100% - 70px );
     padding-right: 10px;
