@@ -3,10 +3,7 @@
   <div class="container">
     <div class="row  main-content">
       <div v-for="(productItem, index) in productItems" :key="index" class="col-md-3 col-sm-6 col-12">
-
-
           <productItem :product="productItem"></productItem>
-
       </div>
     </div>
   </div>
