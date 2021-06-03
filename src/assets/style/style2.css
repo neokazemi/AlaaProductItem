@@ -1,9 +1,26 @@
-
+.main-price{
+    font-weight: 500;
+}
 @media screen and (max-width: 768px){
     .discount {
         width: 45px;
         height: 35px;
         margin-right: 120px;
+    }
+    .final-rice {
+        margin-right: 0px;
+        font-size: 16px;
+
+    }
+    .price-box .price-Toman {
+        font-size: 11px;
+    }
+    .main-title .title-text {
+        font-size: 14px;
+
+    }
+    .main-title{
+        margin-top: 0;
     }
 }
 @media  screen and (max-width:370px){
@@ -19,7 +36,7 @@
         font-size: 16px;
     }
     .price-info .final-price-box{
-        margin-right: 16px;
+        /*margin-right: 16px;*/
     }
     .price-box .price-Toman {
         font-size: 11px;
