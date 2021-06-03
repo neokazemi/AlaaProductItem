@@ -1,5 +1,8 @@
+
 @media screen and (max-width: 768px){
     .discount {
+        width: 45px;
+        height: 35px;
         margin-right: 120px;
     }
 }
@@ -30,7 +33,6 @@
     .discount {
         width: 45px;
         height: 35px;
-        /*margin-right: 89px;*/
     }
     .add-cart-info {
     margin-right: 15px;
@@ -43,6 +45,7 @@
     .final-rice {
         margin-left: 0px;
     }
+
 
 }
 @media  screen and (max-width:1200px){
