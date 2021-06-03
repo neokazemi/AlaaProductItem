@@ -2,11 +2,11 @@
   <div id="app" >
   <div class="container">
     <div class="row  main-content">
-      <div v-for="(productItem, index) in productItems" :key="index" class="col-md-3 col-sm-6 col-12">
-
+      <div v-for="productItem in productItems" class="col-md-3 col-sm-6 col-12">
+        <div class="product-item-box ">
 
           <productItem :product="productItem"></productItem>
-
+        </div>
       </div>
     </div>
   </div>
@@ -95,7 +95,7 @@ export default {
         },
         {
           image: 'https://cdn.alaatv.com/upload/images/product/02_20210510085432.jpg',
-          title: ' همایش آرش جمع بندی علوم و فنون ادبی کنکورهمایش آرش جمع بندی علوم و فنون ادبی کنکورهمایش آرش جمع بندی علوم و فنون ادبی کنکورهمایش آرش جمع بندی علوم و فنون ادبی کنکور',
+          title: 'همایش آرش جمع بندی علوم و فنون ادبی کنکور',
           author: 'محمد صادق ثابتی',
           duration: '۲۰ ساعت',
           price: {
@@ -116,7 +116,6 @@ export default {
 <style scoped>
 .main-content{
   margin-top: 100px;
-
 
 }
 
