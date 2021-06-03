@@ -1,7 +1,52 @@
+
 @media screen and (max-width: 768px){
     .discount {
+        width: 45px;
+        height: 35px;
         margin-right: 120px;
     }
+}
+@media  screen and (max-width:370px){
+    .time-author-box {
+        font-size: 11px;
+        margin-top: 6px;
+    }
+    .main-title .title-text{
+        font-size: 14px;
+    }
+    .final-rice {
+        margin-left: 6px;
+        font-size: 16px;
+    }
+    .price-info .final-price-box{
+        margin-right: 16px;
+    }
+    .price-box .price-Toman {
+        font-size: 11px;
+    }
+    .price-box{
+        margin-top: 12px;
+    }
+    .price-box .add-cart-info{
+        margin-top: 4px;
+    }
+    .discount {
+        width: 45px;
+        height: 35px;
+    }
+    .add-cart-info {
+    margin-right: 15px;
+    }
+}
+@media  screen and (max-width:338px){
+    .discount {
+        margin-right: 89px;
+    }
+    .final-rice {
+        margin-left: 0px;
+    }
+
+
 }
 @media  screen and (max-width:1200px){
 
