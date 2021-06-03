@@ -8,6 +8,11 @@
     justify-content: center;
     align-items: center;
 }
+.final-price-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @media  all and (max-width:768px){
     .add-cart-info{
         order: 2;
