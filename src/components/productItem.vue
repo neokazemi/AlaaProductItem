@@ -6,8 +6,10 @@
      </a>
     <div class="product-item-content">
       <div class="main-title">
-        <a href="#" class="title-text">
-         {{product.title }}
+        <a href="#" class="title-box">
+        <span class="title-text">
+           {{product.title }}
+        </span>
         </a>
       </div>
       <div class="time-author-box">
