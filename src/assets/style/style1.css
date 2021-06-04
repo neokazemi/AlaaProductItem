@@ -19,7 +19,15 @@
     margin-top: 7px;
     margin-bottom: 5px;
 }
-.title-box{
+.main-title .title-box{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+}
+.main-title .title-box .title-text {
+
+
     font-size: 16px;
     font-weight: 500;
     font-stretch:normal;
@@ -30,18 +38,6 @@
     letter-spacing: normal;
     color: #333333;
     overflow: hidden;
-}
-.main-title .title-text {
-    display: flex;
-    align-items: center;
-    width: 100%;
-
-    height: 48px;
-
-
-
-
-
 }
 
 
