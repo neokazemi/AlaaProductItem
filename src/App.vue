@@ -2,17 +2,13 @@
   <div id="app" >
   <div class="container">
     <div class="row  main-content">
-      <div v-for="productItem in productItems" class="col-md-3 col-sm-6 col-12">
-        <div class="product-item-box ">
-
+        <div v-for="(productItem, index) in productItems" :key="index" class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
           <productItem :product="productItem"></productItem>
-        </div>
       </div>
     </div>
   </div>
   </div>
 </template>
-
 <script>
 import './assets/style/font.css'
 import './assets/style/style1.css'
@@ -25,7 +21,7 @@ export default {
       productItems:[
         {
           image: 'https://cdn.alaatv.com/upload/images/product/01_20210510085445.jpg?w=331&h=331',
-          title: 'همایش آرش جمع بندی علوم و فنون ادبی کنکور',
+          title: 'همایش آرش جمع بندی ',
           author: 'محمد صادق ثابتی',
           duration: '۲۰ ساعت',
           price: {
@@ -95,7 +91,7 @@ export default {
         },
         {
           image: 'https://cdn.alaatv.com/upload/images/product/02_20210510085432.jpg',
-          title: 'همایش آرش جمع بندی علوم و فنون ادبی کنکور',
+          title: ' همایش آرش جمع بندی علوم و فنون ادبی کنکورهمایش آرش جمع بندی علوم و فنون ادبی کنکورهمایش آرش جمع بندی علوم و فنون ادبی کنکورهمایش آرش جمع بندی علوم و فنون ادبی کنکور',
           author: 'محمد صادق ثابتی',
           duration: '۲۰ ساعت',
           price: {
@@ -117,6 +113,7 @@ export default {
 .main-content{
   margin-top: 100px;
 
+
 }
 
 #app{
@@ -126,7 +123,6 @@ export default {
 
 
 .product-item-box {
-  padding: 15px;
   width: 100%;
   border-radius: 20px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
