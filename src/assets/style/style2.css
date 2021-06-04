@@ -21,12 +21,15 @@
     }
     .main-title{
         margin-top: 0;
+        margin-bottom: 0;
+    }
+    .time-author-box {
+        margin-bottom: 0;
     }
 }
 @media  screen and (max-width:370px){
     .time-author-box {
         font-size: 11px;
-        margin-top: 6px;
     }
     .main-title .title-text{
         font-size: 14px;
@@ -41,9 +44,7 @@
     .price-box .price-Toman {
         font-size: 11px;
     }
-    .price-box{
-        margin-top: 12px;
-    }
+
     .price-box .add-cart-info{
         margin-top: 4px;
     }
