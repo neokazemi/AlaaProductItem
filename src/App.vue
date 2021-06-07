@@ -1,20 +1,19 @@
 <template>
   <div id="app" >
-  <div class="container">
-    <div class="row  main-content">
+    <div class="container">
+      <div class="row  main-content">
         <div v-for="(productItem, index) in productItems" :key="index" class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
           <productItem :product="productItem"></productItem>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 </template>
 <script>
 import './assets/style/font.css'
-import './assets/style/style1.css'
-import './assets/style/style2.css'
+// import './assets/style/style1.css'
+// import './assets/style/style2.css'
 import productItem from './components/productItem.vue'
-
 export default {
   data(){
     return {
@@ -108,19 +107,13 @@ export default {
   }
 }
 </script>
-
 <style scoped>
 .main-content{
   margin-top: 100px;
-
-
 }
-
 #app{
   width: 100%;
   height: 100%;
 }
-
-
 
 </style>
