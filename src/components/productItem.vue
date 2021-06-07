@@ -1,38 +1,38 @@
 <template>
   <div class="product-item-box ">
-  <div class="product-item-main-box">
-    <a href="#" class="img-box">
-      <img :src="product.image" class="img" alt="img1">
-     </a>
-    <div class="product-item-content">
-      <div class="main-title">
-        <a href="#" class="title-box">
+    <div class="product-item-main-box">
+      <a href="#" class="img-box">
+        <img :src="product.image" class="img" alt="img1">
+      </a>
+      <div class="product-item-content">
+        <div class="main-title">
+          <a href="#" class="title-box">
         <span class="title-text">
            {{product.title }}
         </span>
-        </a>
-      </div>
-      <div class="time-author-box">
-        <div  class="box-item">
-          <img src="../assets/icons/teacher.png" class="teacher-icon" alt="img1">
-          <span class="author">
+          </a>
+        </div>
+        <div class="time-author-box">
+          <div  class="box-item">
+            <img src="../assets/icons/teacher.png" class="teacher-icon" alt="img1">
+            <span class="author">
           {{ product.author }}
          </span>
+          </div>
+          <div class="box-item">
+            <img src="../assets/icons/time.png" class="time-icon" alt="img1">
+            <span class="time"> {{product.duration}}</span>
+          </div>
         </div>
-        <div class="box-item">
-          <img src="../assets/icons/time.png" class="time-icon" alt="img1">
-          <span class="time"> {{product.duration}}</span>
-        </div>
-      </div>
         <div class="price-box">
           <div class="add-cart-info"> <img src="../assets/icons/add_cart.png" class="add-cart-icon" alt="img1"></div>
           <div class="price-info">
             <div class="main-price">%{{product.price.base}}</div>
-           <div class="final-price-box">
-             <div class="final-rice">{{product.price.final }}</div>
-             <div class="price-Toman">تومان
+            <div class="final-price-box">
+              <div class="final-rice">{{product.price.final }}</div>
+              <div class="price-Toman">تومان
+              </div>
             </div>
-           </div>
           </div>
         </div>
       </div>
@@ -43,16 +43,15 @@
 <script>
 export  default {
   props: ['product'],
-data(){
-  return{
-  }
-},
+  data(){
+    return{
+    }
+  },
   methods:{
   }
 }
 </script>
-<style scoped>
-
+<style>
 .product-item-box {
   margin-bottom: 25px;
   padding: 15px;
@@ -87,9 +86,7 @@ data(){
   color: #333333;
   overflow: hidden;
 }
-
 /*--------------------author box---------------------*/
-
 .time-author-box {
   display: flex;
   flex-wrap: nowrap;
@@ -97,60 +94,48 @@ data(){
   font-size: 13px;
   margin-bottom: 10px;
 }
-
 .author {
   color: #666666;
-
 }
 .teacher-icon {
   width: 13px;
   height: 13px;
   margin-left: 6px;
-
 }
-
 .time-icon {
   width: 12px;
   height: 12px;
   margin-left: 6px;
-
 }
-
 .time {
   color: #666666;
 }
-
 .box-item {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 /*-------------------price box----------------------*/
 .add-cart-info {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .price-info {
   display: flex;
   justify-content: center;
   align-items: baseline;
 }
-
 .final-price-box {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .price-box {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
-
 .discount {
   width: 54px;
   height: 54px;
@@ -165,51 +150,55 @@ data(){
   justify-content: center;
   align-items: center;
 }
-
 .main-price {
   color: #ff5050;
   text-decoration: #333333 line-through;
   font-size: 13px;
+  font-weight: 500;
 }
-
 .final-rice {
   margin-left: 6px;
   margin-right: 11px;
   font-size: 18px;
 }
-
 .add-cart-icon {
   width: 19px;
   order: 1;
 }
-
 .price-box .price-Toman {
   font-size: 13px;
 }
-
 @media screen and (max-width: 990px) {
-
   .price-box .main-price {
     font-size: 18px;
   }
 }
-
-@media screen and (max-width: 768px) {
-  .product-item-box{
-    border-radius: 10px;
-  }
+@media screen and (max-width: 768px){
   .add-cart-info {
     order: 2;
   }
+  .price-info {
+    flex-direction: column;
+  }
+  .product-item-box{
+    border-radius: 10px;
+  }
+  .final-price-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .product-item-box {
     padding-bottom: 0;
+  }
+  .price-box .main-price {
+    font-size: 11px;
   }
   .product-item-main-box {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-
   .product-item-content {
     width: calc(100% - 90px);
     padding-right: 15px;
@@ -218,34 +207,96 @@ data(){
     width: 90px;
     height: 90px;
   }
-  /*----------------title--------------*/
-  .main-title {
-    padding: 0;
-  }
 
-  /*-------------------price box----------------------*/
-  .price-info {
-    flex-direction: column;
-  }
-  .price-box .main-price {
-    font-size: 11px;
-  }
-  .final-price-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .discount {
     border-radius: 10px 10px 0 0;
     position: absolute;
     top:auto;
     bottom: 25px;
+    width: 45px;
+    height: 35px;
+    margin-right: 120px;
+  }
+  .final-rice {
+    margin-right: 0px;
+    font-size: 16px;
+  }
+  .price-box .price-Toman {
+    font-size: 11px;
+  }
+  .main-title .title-text {
+    font-size: 14px;
   }
   .price-box{
     justify-content: flex-end;
   }
+  .main-title{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
   .add-cart-info{
     margin-right: 30px;
+  }
+  .time-author-box {
+    margin-bottom: 0;
+  }
+}
+@media  screen and (max-width:376px){
+  .time-author-box {
+    font-size: 11px;
+  }
+  .main-title .title-box .title-text{
+    font-size: 14px;
+  }
+  .final-rice {
+    margin-left: 6px;
+    font-size: 16px;
+  }
+  .price-info .final-price-box{
+    /*margin-right: 16px;*/
+  }
+  .price-box .price-Toman {
+    font-size: 11px;
+  }
+  .price-box .add-cart-info{
+    margin-top: 4px;
+  }
+  .discount {
+    width: 45px;
+    height: 35px;
+  }
+  .add-cart-info {
+    margin-right: 15px;
+  }
+}
+@media  screen and (max-width:338px){
+  .final-rice {
+    margin-left: 0px;
+  }
+  .add-cart-info {
+    margin-right: 5px;
+  }
+}
+@media  screen and (max-width:315px){
+  .product-item-content {
+    width: calc(100% - 70px);
+    padding-right: 10px;
+  }
+  .img-box {
+    width: 70px;
+    height: 70px;
+  }
+  .discount {
+    margin-right: 93px;
+  }
+}
+@media  screen and (max-width:301px){
+  .final-rice {
+    margin-left: 7px;
+  }
+  .discount {
+    margin-right: 95px;
   }
 }
 @media screen and (max-width: 300px) {
@@ -257,5 +308,9 @@ data(){
     width: 70px;
     height: 70px;
   }
+}
+@media  screen and (max-width:1200px){
+}
+@media screen and (max-width:768px){
 }
 </style>
