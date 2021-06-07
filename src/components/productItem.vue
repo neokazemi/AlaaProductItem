@@ -88,6 +88,7 @@ data(){
   overflow: hidden;
 }
 
+
 /*--------------------author box---------------------*/
 
 .time-author-box {
