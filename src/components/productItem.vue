@@ -1,118 +1,142 @@
 <template>
-  <div >
-    <div class="img-box">
-      <img src="@/assets/images/img1.jpg" class="img" alt="img1">
-     </div>
-    <div >
-
-      <div class="main-title">
+  <div class="product-item-box ">
+    <div class="product-item-main-box">
+      <a href="#" class="img-box">
+        <img :src="product.image" class="img" alt="img1">
+      </a>
+      <div class="product-item-content">
+        <div class="main-title">
+          <a href="#" class="title-box">
         <span class="title-text">
-          همایش آرش جمع بندی علوم و فنون
-ادبی کنکور
+           {{product.title }}
         </span>
-
-      </div>
-      <div class="time-author-box">
-        <div class="box-item">
-          <img src="../assets/icons/teacher.png" class="teacher-icon" alt="img1">
-          <span class="author">
-          محمد صادقی
+          </a>
+        </div>
+        <div class="time-author-box">
+          <div  class="box-item">
+            <img src="../assets/icons/teacher.png" class="teacher-icon" alt="img1">
+            <span class="author">
+          {{ product.author }}
          </span>
-
-        </div>
-        <div class="box-item">
-          <img src="../assets/icons/time.png" class="time-icon" alt="img1">
-          <span class="time"> {{20 | persianDigit }} ساعت</span>
-
-        </div>
-      </div>
-      <div>
-        <div class="price-box">
-          <div class="box-item"> <img src="../assets/icons/add_cart.png" class="add-cart-icon" alt="img1"></div>
-          <div class="box-item discount"> <span>{{ discount | persianDigit }} </span></div>
+          </div>
           <div class="box-item">
-            <div class="main-price">{{ price | persianDigit }}</div>
-            <div class="final-rice">{{ finalPrice | persianDigit }}</div>
-            <div>تومان</div>
+            <img src="../assets/icons/time.png" class="time-icon" alt="img1">
+            <span class="time"> {{product.duration}}</span>
+          </div>
+        </div>
+        <div class="price-box">
+          <div class="add-cart-info"> <img src="../assets/icons/add_cart.png" class="add-cart-icon" alt="img1"></div>
+          <div class="price-info">
+            <div class="main-price">%{{product.price.base}}</div>
+            <div class="final-price-box">
+              <div class="final-rice">{{product.price.final }}</div>
+              <div class="price-Toman">تومان
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
+    <div class="box-item discount" id="discount"> <span>%{{Math.round(((product.price.base-product.price.final) /(product.price.base))*100)}} </span></div>
   </div>
 </template>
 <script>
-
 export  default {
-data(){
-  return{
-    price:1500,
-    discount:'30%',
-    finalPrice:1200,
-
-  }
-},
-  methods:{
-    discountPercent(){
-      return  this.discount=(this.finalPrice/this.price)
+  props: ['product'],
+  data(){
+    return{
     }
+  },
+  methods:{
   }
 }
 </script>
-<style scoped>
-
-.img{
+<style>
+.product-item-box {
+  margin-bottom: 25px;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+}
+.img {
   width: 100%;
   height: 100%;
 }
 /*----------------title--------------*/
-.main-title{
+.main-title {
+  margin-top: 7px;
+  margin-bottom: 5px;
 }
-.main-title title-text{
+.main-title .title-box{
+  display: flex;
+  align-items: center;
   width: 100%;
+  height: 48px;
+}
+.main-title .title-box .title-text {
   font-size: 16px;
   font-weight: 500;
-  font-stretch: normal;
-  line-height: 1.5;
+  font-stretch:normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
   letter-spacing: normal;
   color: #333333;
-
+  overflow: hidden;
 }
 /*--------------------author box---------------------*/
-
-.time-author-box{
+.time-author-box {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 10px;
 }
-.author{
+.author {
   color: #666666;
 }
-.teacher-icon{
+.teacher-icon {
   width: 13px;
   height: 13px;
   margin-left: 6px;
 }
-.time-icon{
+.time-icon {
   width: 12px;
   height: 12px;
   margin-left: 6px;
 }
-.box-item time{
+.time {
   color: #666666;
 }
-.box-item{
+.box-item {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 /*-------------------price box----------------------*/
-.price-box{
+.add-cart-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.price-info {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.final-price-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.price-box {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
-.discount{
+.discount {
   width: 54px;
   height: 54px;
   border-radius: 0 20px 0 20px;
@@ -120,31 +144,173 @@ data(){
   position: absolute;
   background-color: #ff5050;
   color: white;
-  top: 0 ;
+  top: 0;
   right: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main-price{
+.main-price {
   color: #ff5050;
   text-decoration: #333333 line-through;
-  margin-left: 6px;
   font-size: 13px;
+  font-weight: 500;
 }
-.final-rice{
+.final-rice {
   margin-left: 6px;
+  margin-right: 11px;
   font-size: 18px;
 }
-.discount span{
-  width: 35px;
-}
-.add-cart-icon{
+.add-cart-icon {
   width: 19px;
+  order: 1;
 }
-@media only screen and (max-width:375px){
-
-  .img{
+.price-box .price-Toman {
+  font-size: 13px;
+}
+@media screen and (max-width: 990px) {
+  .price-box .main-price {
+    font-size: 18px;
   }
+}
+@media screen and (max-width: 768px){
+  .add-cart-info {
+    order: 2;
+  }
+  .price-info {
+    flex-direction: column;
+  }
+  .product-item-box{
+    border-radius: 10px;
+  }
+  .final-price-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .product-item-box {
+    padding-bottom: 0;
+  }
+  .price-box .main-price {
+    font-size: 11px;
+  }
+  .product-item-main-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .product-item-content {
+    width: calc(100% - 90px);
+    padding-right: 15px;
+  }
+  .img-box {
+    width: 90px;
+    height: 90px;
+  }
+
+  .discount {
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    top:auto;
+    bottom: 25px;
+    width: 45px;
+    height: 35px;
+    margin-right: 120px;
+  }
+  .final-rice {
+    margin-right: 0px;
+    font-size: 16px;
+  }
+  .price-box .price-Toman {
+    font-size: 11px;
+  }
+  .main-title .title-text {
+    font-size: 14px;
+  }
+  .price-box{
+    justify-content: flex-end;
+  }
+  .main-title{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .add-cart-info{
+    margin-right: 30px;
+  }
+  .time-author-box {
+    margin-bottom: 0;
+  }
+}
+@media  screen and (max-width:376px){
+  .time-author-box {
+    font-size: 11px;
+  }
+  .main-title .title-box .title-text{
+    font-size: 14px;
+  }
+  .final-rice {
+    margin-left: 6px;
+    font-size: 16px;
+  }
+  .price-info .final-price-box{
+    /*margin-right: 16px;*/
+  }
+  .price-box .price-Toman {
+    font-size: 11px;
+  }
+  .price-box .add-cart-info{
+    margin-top: 4px;
+  }
+  .discount {
+    width: 45px;
+    height: 35px;
+  }
+  .add-cart-info {
+    margin-right: 15px;
+  }
+}
+@media  screen and (max-width:338px){
+  .final-rice {
+    margin-left: 0px;
+  }
+  .add-cart-info {
+    margin-right: 5px;
+  }
+}
+@media  screen and (max-width:315px){
+  .product-item-content {
+    width: calc(100% - 70px);
+    padding-right: 10px;
+  }
+  .img-box {
+    width: 70px;
+    height: 70px;
+  }
+  .discount {
+    margin-right: 93px;
+  }
+}
+@media  screen and (max-width:301px){
+  .final-rice {
+    margin-left: 7px;
+  }
+  .discount {
+    margin-right: 95px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .product-item-content {
+    width: calc(100% - 70px);
+    padding-right: 10px;
+  }
+  .img-box {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media  screen and (max-width:1200px){
+}
+@media screen and (max-width:768px){
 }
 </style>
