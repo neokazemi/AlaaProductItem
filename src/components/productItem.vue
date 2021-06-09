@@ -29,7 +29,7 @@
           <div class="price-info">
             <div class="main-price">%{{product.price.base}}</div>
             <div class="final-price-box">
-              <div class="final-rice">{{product.price.final }}</div>
+              <div class="final-price">{{product.price.final }}</div>
               <div class="price-Toman">تومان
               </div>
             </div>
@@ -161,7 +161,7 @@ export  default {
 .product-item-box .product-item-main-box .product-item-content .price-box .price-Toman {
   font-size: 13px;
 }
-.product-item-box .product-item-main-box .product-item-content .price-box .price-info .final-price-box .final-rice {
+.product-item-box .product-item-main-box .product-item-content .price-box .price-info .final-price-box .final-price {
   margin-left: 6px;
   margin-right: 11px;
   font-size: 18px;
@@ -175,18 +175,18 @@ export  default {
 @media screen and (max-width: 768px){
   .product-item-box{
     border-radius: 10px;
-    padding: 8px;
+
   }
   .product-item-box .product-item-main-box {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
   }
   .product-item-box .product-item-main-box .product-item-content {
     width: calc(100% - 90px);
     padding-right: 15px;
   }
-  .product-item-box .product-item-main-box .img-box {
+  .product-item-box .product-item-main-box .img-box .img{
     width: 90px;
     height: 90px;
   }
@@ -208,7 +208,7 @@ export  default {
   .product-item-box .product-item-main-box .product-item-content .price-box .price-box .main-price {
     font-size: 11px;
   }
-  .product-item-box .product-item-main-box .product-item-content .price-box .price-info .final-price-box.final-rice {
+  .product-item-box .product-item-main-box .product-item-content .price-box .price-info .final-price-box.final-price {
     margin-right: 0px;
     font-size: 16px;
   }
@@ -241,16 +241,22 @@ export  default {
   }
 }
 @media  screen and (max-width:376px){
-  .product-item-box .product-item-main-box .img-box{
-    padding: 7px;
+  .product-item-box{
+    padding: 15px;
   }
+  .product-item-box .product-item-main-box .img-box .img{
+    width: 90px;
+    height: 90px;
+
+  }
+
   .product-item-box .product-item-main-box .product-item-content .time-author-box {
     font-size: 11px;
   }
   .product-item-box .product-item-main-box .product-item-content .main-title .title-box .title-text{
     font-size: 14px;
   }
-  .product-item-box .product-item-main-box .product-item-content .price-box .price-info .final-price-box .final-rice {
+  .product-item-box .product-item-main-box .product-item-content .price-box .price-info .final-price-box .final-price {
     margin-left: 6px;
     margin-right: 0;
     font-size: 16px;
@@ -272,52 +278,40 @@ export  default {
     margin-right: 15px;
   }
 }
-/*@media  screen and (max-width:338px){*/
-/*  .product-item-box .product-item-main-box .product-item-content .price-box .price-info .final-price-box .final-rice {*/
-/*    margin-left: 0px;*/
-/*  }*/
-/*  .product-item-box .product-item-main-box .product-item-content .price-box .add-cart-info {*/
-/*    margin-right: 5px;*/
-/*  }*/
-/*}*/
-/*@media  screen and (max-width:315px){*/
-/*  .product-item-box .product-item-main-box .product-item-content {*/
-/*    width: calc(100% - 70px);*/
-/*    padding-right: 10px;*/
-/*  }*/
-/*  .product-item-box .product-item-main-box .img-box {*/
-/*    width: 70px;*/
-/*    height: 70px;*/
-/*  }*/
-/*  .product-item-box .discount {*/
-/*    margin-right: 93px;*/
-/*  }*/
-/*}*/
-@media  screen and (max-width:300px){
-  .product-item-box .product-item-main-box .product-item-content .price-box .price-info .final-price-box .final-rice {
-    margin-right: 0;
-    font-size: 16px;
+@media screen and (max-width: 350px){
+
+  .product-item-box .product-item-main-box .product-item-content  .product-item-content{
+    padding: 0px;
   }
+}
+@media  screen and (max-width:300px){
+  .product-item-box{
+    padding: 10px;
+  }
+  .product-item-box .product-item-main-box .product-item-content {
+    width: calc(100% - 70px);
+    padding-right: 10px;
+  }
+  .product-item-box .product-item-main-box .img-box{
+
+  }
+  .product-item-box .product-item-main-box .img-box .img{
+    width: 70px;
+    height: 70px;
+  }
+
   .product-item-box .product-item-main-box .product-item-content .price-box .price-info .main-price{
     font-size: 11px;
+  }
+  .product-item-box .product-item-main-box .product-item-content .price-box .price-info .final-price-box .final-price {
+    margin-right: 0;
+    font-size: 16px;
   }
   .product-item-box .discount {
     /*display: none;*/
     margin-right: 89px;
     margin-left: 16px;
   }
-  .product-item-box .product-item-main-box .product-item-content {
-    width: calc(100% - 70px);
-    padding-right: 10px;
-  }
-  .product-item-box .product-item-main-box .img-box {
-    width: 70px;
-    height: 70px;
-    padding: 3px 3px 3px 0;
-  }
-}
-@media screen and (max-width: 300px) {
 
 }
-
 </style>
